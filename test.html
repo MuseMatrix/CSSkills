@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="styles/tomorrow.css">
+    <script src="highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- https://highlightjs.org/download/ -->
+    <style>
+        body, p, ul, dl, dd, ol, h1, h2, h3, h4, h5, h6,pre,code{ margin:0;}
+        ul,ol{ padding-left:0;list-style:none;}
+        body{font-size: 12px; font-family:"Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif";}
+        a{text-decoration: none; color: #999;}
+        img{vertical-align: top;}
+        .container{
+            float:right;
+        }
+        #lvjing,#dan,#duo,#text,#cloud{
+            width: 1500px;
+            padding:30px 40px 10px;
+            background-color:#fff;
+        }
+        h1{
+            font-size: 25px;
+        }
+       .dan{  
+            width: 1500px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            line-height: 35px;
+            overflow: hidden;
+        }
+        .pr{
+            height: 126px;
+            background: #393D49;
+            color: #fff;
+        }
+        .duo{  
+            display: -webkit-box;
+            width: 1500px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            font-size: 16px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .many{
+            height:140px;
+        }
+        .dazi{
+            width:1500px;
+            font-size: 16px;
+            white-space: nowrap;
+            margin: 10px 0;
+            overflow: hidden;
+            animation: run 10s steps(120,end),blink-caret 0.1s step-end infinite alternate;
+        }
+        .dada{
+            height:226px;
+        }
+        @keyframes run{
+            from{
+                width: 0;
+            }
+        }
+        @keyframes blink-caret{
+            50%{
+                border-color: transparent;
+            }
+        }
+       code.hljs {
+            display: initial;
+            overflow-x: auto;
+            color: white;
+            background: none;
+            padding: 0;
+        }
+        .changebefore,.changeafter{
+            height: 300px;
+            background: url("clould.jpg") center/100% 100% no-repeat;
+        }
+        .changeafter{
+            filter: grayscale(100%);
+        }
+        .fl{
+            float: left;
+            width: 750px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #393D49;
+        }
+        .fl span{
+            color: #fff;
+            line-height: 30px;
+        }
+        .lvjing{
+            clear: left;
+            height: 182px;
+        }
+        body{
+            background-color: #393D49;
+        }
+        body:before {
+          content: "";
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          z-index: 100;
+}
+        .left{
+            position: fixed;
+            float: left;
+            width: calc(100% - 1580px);
+            background-color: #393D49;
+        }
+        .left ul{
+            padding: 18px 0;
+        }
+        .left ul li{
+            width: 318px;
+            line-height:50px;
+            color:rgba(255,255,255,.7);
+            font-size: 16px;
+        }
+        .left ul li a{
+            display: inline-block;
+            width: 318px;
+            text-indent: 35px;
+            height: 50px;
+        }
+        .left ul li a:hover{
+            color: #fff;
+            /* border-left: 5px solid #fff; */
+            background-color: #4E5465;
+        }
+        .left ul li:hover{
+            border-left: 5px solid #fff;
+        }
+        .left .logo img{
+            width: 323px;
+        }
+        .container .space{
+        }
+        .yuna{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background: url('full-fire-cloud.jpg') repeat-x 0 center/auto 100%;
+            animation: smooth 10s linear infinite;
+            animation-play-state: running;
+        }
+        @keyframes smooth {
+            to {
+            background-position: 1970px center;
+            }
+        } 
+        .yun{
+            height: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cloud">
+                <h1>CSS平滑效果</h1>
+                <div class="yuna">
+
+                </div>
+                <pre class="pr yun">
+                    <code>
+        .yuna{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background: url('full-fire-cloud.jpg') repeat-x 0 center/auto 100%;
+            animation: smooth 10s linear infinite;
+            animation-play-state: running;
+        }
+        @keyframes smooth {
+            to {
+            background-position: 1970px center;
+            }
+        } 
+                    </code>
+                </pre>
+            </div>
+        <div id="lvjing" class="first">
+            <h1>CSS的滤镜效果</h1>
+            <div class="fl">
+                <span>改变前</span>
+                <div class="changebefore">
+                </div>
+            </div>
+            <div class="fl">
+                <span>改变后</span>
+                <div class="changeafter">
+                </div>
+            </div>
+            <pre class="pr lvjing">
+                <code>
+        .changeafter{
+            //filter: blur(20px);------------给图像设置模糊度
+            //filter: brightness(2);-----------给图片应用一种线性乘法，使其看起来更亮或更暗。如果值是0%，图像会全黑。值是100%，则图像无变化。
+            //filter: contrast(8);-------------调整图像的对比度。值是0%的话，图像会全黑。值是100%，图像不变。值可以超过100%，意味着会运用更低的对比。若没有设置值，默认是1。
+            //filter: grayscale(100%);----------修改图片颜色为黑白
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+        }
+                </code>
+            </pre>
+        </div>
+        <div id="text">
+            <h1>文本打字机效果</h1>
+            <p class="dazi">沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；</p>
+            <pre class="pr dada">
+                <code>
+        .dazi{
+            animation: run 10s steps(120,end),blink-caret 0.1s step-end infinite alternate;
+        }
+        @keyframes run{
+            from{
+                width: 0;
+            }
+        }
+        @keyframes blink-caret{
+            50%{
+                border-color: transparent;
+            }
+        }
+                </code>
+            </pre>
+        </div>
+        <div id="dan">
+            <h1>单行文本溢出</h1>
+            <p class="dan">沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；</p>
+            <pre class="pr">
+                <code>
+        .dan{
+            width: 500px;
+            margin: 0 auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+                </code>
+            </pre>
+        </div>
+        <div id="duo">
+            <h1>多行文本溢出</h1>
+            <p class="duo">
+                沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；
+                沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟;
+                沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟；沧海月明珠有泪，蓝田日暖玉生烟;
+            </p>
+            <pre class="pr many">
+                <code>
+        .duo{
+            width: 500px;
+            margin: 0 auto;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="left">
+        <div class="logo">
+            <img src="uugai.com_1546396663387.png">
+        </div>
+        <ul>
+            <li><a href="#cloud">CSS平滑效果</a></li>
+            <li><a href="#lvjing">CSS的滤镜效果</a></li>
+            <li><a href="#dan">单行文本溢出</a></li>
+            <li><a href="#duo">多行文本溢出</a></li>
+            <li><a href="#text">文本打字机效果</a></li>
+            <li><a href="#text">CSS的垂直居中</a></li>
+            <li><a href="#text">CSS内外边距合并</a></li>
+            <li><a href="#text">CSS的文本渐变</a></li>
+            <li><a href="#text">CSS的模糊文本</a></li>
+            <li><a href="#text">CSS滚动条样式</a></li>
+            <li><a href="#text">CSS简单渐变</a></li>
+        </ul>
+    </div>
+</body>
+</html> 
